@@ -28,6 +28,7 @@ public class TestMain {
 	public static void main(String[] args) throws FileNotFoundException {
 		
 		TestMain test = new TestMain();
+		//GradeTest grade = new GradeTest();
 		
 		// 과목 생성
 		test.createSubject2();
@@ -38,7 +39,7 @@ public class TestMain {
 		System.out.println(report); // 출력
 		
 		// 파일에 출력 하기.
-		try (FileWriter fw = new FileWriter("testInfo.txt")) {
+		try (FileWriter fw = new FileWriter("resultInfo.txt")) {
 			fw.write(report);
 			
 		} catch(Exception e) {
@@ -89,8 +90,8 @@ public class TestMain {
 			addScoreForStudent(student, math, mathScore);
 			addScoreForStudent(student, dance, danceScore);
 		}
-		scanner.close();
-	}
+		scanner.close(); 
+	} 
 	
 	public void createSubject2() throws FileNotFoundException{
 		Scanner scanner = new Scanner(new FileInputStream("subjectInfo.txt"));
@@ -122,7 +123,7 @@ public class TestMain {
 		}
 		scanner.close();
 		
-	}
+	} 
 	
 	//테스트 과목 생성
 	public void creatSubject(){
